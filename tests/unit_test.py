@@ -52,3 +52,10 @@ class MyTestCase(unittest.TestCase):
         
         dimIris = data_processor.get_file_dimensions('../iris.data')
         self.assertEqual(dimIris, (150, 5))
+    
+    def test_matrix_to_file(self):
+        data = data_processor.write_matrix_to_file(5, 5, 'test.csv')
+        
+        dim = data_processor.get_file_dimensions('test.csv')
+        self.assertEqual(dim, (5, 5))
+        os.remove('test.csv')
