@@ -17,7 +17,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v2
         with: 
           activate-environment: Assignment_7_environment
-          environment-file: environment.yml
+          environment-file: environment7.yml
       - run: bash test_plotter.sh
   
   code_style: 
@@ -30,7 +30,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v2
         with: 
           activate-environment: Assignment_7_environment
-          environment-file: environment.yml
+          environment-file: environment7.yml
       - run: pycodestyle $(git ls-files "*.py")
       
   unit_tests:
@@ -43,5 +43,5 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v2
         with: 
           activate-environment: Assignment_7_environment
-          environment-file: environment.yml
+          environment-file: environment7.yml
       - run: python -m unittest unit_test.py
