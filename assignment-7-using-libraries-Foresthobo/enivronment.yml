@@ -2,11 +2,7 @@ name: Assignment_7_environment
 channels:
   - conda-forge
 dependencies:
-  - conda
-  - python
-  - pip
   - pycodestyle
   - numpy
   - pandas
   - matplotlib
-prefix: /home/jovyan/.conda/envs/Assignment_7_environment
